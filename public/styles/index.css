@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-image: url("https://media1.tenor.com/images/0f216568c6f10ba607cad3c05ad47fed/tenor.gif?itemid=5490146");
+  background-size: cover;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.blue {
+  color: blue !important;
+}
+#marquee {
+  margin-top: 10px;
+}
+.status {
+  width: 300px;
+  margin: auto;
+  height: 5px;
+  border-radius: 999px;
+  background: red;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+#status {
+  background-color: blue !important;
+  width: 0;
+  height: 5px;
+}
+.container__left > img {
+  filter: invert(1) !important;
+}
+.container__left.rotate > img {
+  animation: myanimation 5s infinite linear !important;
+}
+#audio-tag {
+  display: none;
+}
+.fas {
+  cursor: pointer;
+  font-size: 25px;
+  color: green;
+  margin: 10px;
+  z-index: 10;
+}
+.playlist {
+  align-items: start;
+  padding: 5px;
+  flex: 1;
+  overflow-y: scroll;
+  height: 90vh;
+}
+.container__rightButons {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+.music__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 100%;
+  margin-top: 2px;
+  border-radius: 2px;
+  color: black;
+  background-color: lightblue;
+  margin-bottom: 2px;
+}
+.music__list:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.music__list > img {
+  width: 30px;
+  margin-right: 2px;
+  object-fit: contain;
+}
+.music__list > p {
+  color: black;
+  flex: 1;
+  font-size: 14px;
+}
+.music__list:nth-child(even) {
+  background: lightgreen;
+}
+h6 {
+  margin-bottom: 5px;
+  align-self: center;
+  text-align: center;
+  position: sticky;
+  padding: 8px;
+  top: 0;
+  z-index: 10;
+  background: black;
+}
+.current {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: column;
+  width: 300px;
+}
+#volume_down:active,
+#volume_up:active,
+.flip:active {
+  color: blue;
+}
+.container__right {
+  flex: 1;
+}
+#close {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 5px 10px;
+  width: 100px;
+  cursor: pointer;
+}
+#close:hover {
+  opacity: 0.9;
+}
+#close:active {
+  background-color: green;
+}
+@keyframes myanimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* width */
+.playlist::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.playlist::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.playlist::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 999px;
+}
+
+/* Handle on hover */
+.playlist::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

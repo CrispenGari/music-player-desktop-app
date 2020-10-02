@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/c8de22c177.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__left">
+        <img
+          className="videofooter__albumIcon"
+          src="https://static.thenounproject.com/png/934821-200.png"
+          alt=""
+        />
+
+        <audio controls id="audio-tag">
+          <source
+            src="../music/AUD-20200812-WA0032.mp3"
+            type="audio/mp3"
+            id="audio-src"
+          />
+        </audio>
+      </div>
+      <div class="container__right">
+        <div class="current">
+          <marquee id="marquee" behavior="" direction="">
+            <span id="music__name"></span
+          ></marquee>
+          <div class="status" title="seek">
+            <div id="status"></div>
+          </div>
+          <div class="container__rightButons">
+            <i class="fas fa-pause" id="play" title="play"></i>
+            <i class="fas fa-random flip" title="shuffle"></i>
+            <i class="fas fa-volume-up" title="volume up" id="volume_up"></i>
+            <i
+              class="fas fa-volume-down"
+              title="volume dowm"
+              id="volume_down"
+            ></i>
+            <i class="fas fa-volume-mute" title="mute" id="mute"></i>
+            <i class="fas fa-redo-alt" title="repeat" id="loop"></i>
+            <i class="fas fa-backward flip" title="previous" id="previous"></i>
+            <i class="fas fa-forward flip" title="next" id="next"></i>
+          </div>
+        </div>
+      </div>
+      <div class="playlists">
+        <h6>Music List</h6>
+        <div class="playlist"></div>
+      </div>
+    </div>
+    <button id="close">Close</button>
+    <script>
+      require("../public/scripts/index.js");
+    </script>
+  </body>
+</html>
